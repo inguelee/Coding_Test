@@ -1,5 +1,5 @@
 N = int(input())
-A = list(input().split())
+A = input().split()
 d = {'L':-1, 'R':1, 'U':-1, 'D':1}
 X, Y = 1, 1
 for i in A:
