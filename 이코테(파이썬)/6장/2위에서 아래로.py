@@ -1,7 +1,7 @@
 N = int(input())
 data = []
 
-for i in range(N):
+for _ in range(N):
     data.append(int(input()))
 
 data.sort(reverse=True)
