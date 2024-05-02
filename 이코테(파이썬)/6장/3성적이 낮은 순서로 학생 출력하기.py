@@ -1,16 +1,14 @@
 N = int(input())
-data = ()
-array = []
+data = []
+for _ in range(N):
+    a, b = input().split()
+    b = int(b)
+    data.append([a, b])
 
-for i in range(N):
-    A, B = input().split()
-    data = (A,int(B))
-    array.append(data)
-
-def sw(data):
+def setting(data):
     return data[1]
 
-array.sort(key=sw)
+data.sort(key=setting)
 
-for i in array:
+for i in data:
     print(i[0], end=' ')
