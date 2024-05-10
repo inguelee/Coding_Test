@@ -1,7 +1,9 @@
 N, M, K = map(int, input().split())
-data = sorted(list(map(int, input().split())))
+data = list(map(int, input().split()))
 
-S1 = M // (K + 1)
+data.sort()
 
-result = (data[-1] * (M - S1)) + (S1 * data[-2])
+c = M // (K + 1)
+
+result = ((M - c) * data[-1]) + data[-2] * c
 print(result)

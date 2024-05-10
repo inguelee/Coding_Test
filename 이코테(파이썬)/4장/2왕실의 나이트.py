@@ -1,12 +1,14 @@
-S = input()
+s = input()
 
-SS = ord(S[0]) - 96, int(S[1])
+s0 = ord(s[0]) - ord('a') + 1
+s1 = int(s[1])
+data = [(1, 2), (1, -2), (-1, 2), (-1, -2), (2, 1), (2, -1), (-2, 1), (-2, -1)]
 result = 0
-data = [(2, 1), (2, -1), (-2,1), (-2,-1), (1,2),(1,-2), (-1,2), (-1,-2)]
 
-for i in data:    
-    a = SS[0] + i[0]
-    b = SS[1] + i[1]
-    if 0 < a < 9 and 0 < b < 9:
+for i in data:
+    x = s0 + i[0]
+    y = s1 + i[1]
+    if 0 < x < 9 and 0 < y < 9:
         result += 1
+
 print(result)
