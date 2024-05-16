@@ -1,9 +1,9 @@
-S = input()
+S = list(input())
 
 result = int(S[0])
 
 for i in S[1:]:
-    if result < 2 or int(i) < 2:
+    if result < 1 or int(i) < 1:
         result += int(i)
     else:
         result *= int(i)
