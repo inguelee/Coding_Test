@@ -1,12 +1,11 @@
 from itertools import combinations
 
 N, M = map(int, input().split())
-k = list(map(int, input().split()))
-result = []
+K = list(map(int, input().split()))
+result = 0
 
-# print(list(combinations(k, 2)))
-for i in list(combinations(k, 2)):
+for i in list(combinations(K, 2)):
     if i[0] != i[1]:
-        result.append(i)
+        result += 1
 
-print(len(result))
+print(result)
