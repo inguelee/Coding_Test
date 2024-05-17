@@ -1,19 +1,27 @@
 N = int(input())
 A = input().split()
 
-dX = {'L':-1, 'R':1}
-dY = {'U':-1, 'D':1}
-X, Y = 1, 1
+dx = [0, 1, 0,-1]
+dy = [1, 0,-1, 0]
+x, y = 1, 1
+d = 0
+#     R  D  L  U
+#     0  1  2  3
 
 for i in A:
-    if i in dX:
-        X += dX[i]
-    elif i in dY:
-        Y += dY[i]
+    if i == 'R':
+        d = 0
+    elif i == 'D':
+        d = 1
+    elif i == 'L':
+        d = 2
+    elif i == 'U':
+        d = 3
+    
+    nx = x + dx[d]
+    ny = y + dy[d]
 
-    if X > N or X < 1:
-        X -= dX[i]
-    elif Y > N or Y < 1:
-        Y -= dY[i]
+    if 0 < nx <= N and 0 < ny <= N:
+        x, y = nx, ny
 
-print(Y, X)
+print(x, y)
