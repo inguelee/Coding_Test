@@ -1,30 +1,22 @@
 N, M = map(int, input().split())
-data = []
+graph = list()
 for _ in range(N):
-    data.append(list(map(int, input())))
+    graph.append(list(map(int, input())))
 
-graph = [[False] * M for _ in range(N)]
 result = 0
-x, y = 0, 0
 
 def dfs(x, y):
     if 0 <= x < N and 0 <= y < M:
         if graph[x][y]:
             return False
-        
-        if data[x][y]:
-            return False
         else:
-            graph[x][y] = True
+            graph[x][y] = 1
             dfs(x + 1, y)
             dfs(x, y + 1)
             dfs(x - 1, y)
             dfs(x, y - 1)
             return True
-    else:
-        return False
-
-    
+    return False
 
 for i in range(N):
     for j in range(M):
