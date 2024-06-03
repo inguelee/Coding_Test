@@ -22,6 +22,6 @@ def bfs():
                     graph[nx][ny] = graph[x][y] + 1
                     q.append((nx, ny))
 
-bfs()
+    return graph[N-1][M-1]
 
-print(graph[N - 1][M - 1])
+print(bfs())
