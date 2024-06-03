@@ -16,14 +16,13 @@ while q:
     x = q.popleft()
     for i in graph[x]:
         if d[i] == -1:
-            d[i] = d[X] + 1
+            d[i] = d[x] + 1
             q.append(i)
-    X += 1
 
 find = False
-for i in range(len(d)):
+for i in range(1, N + 1):
     if d[i] == K:
-        print(data[i])
+        print(i)
         find = True
 
 if find == False:
