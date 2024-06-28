@@ -1,0 +1,6 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+from sys import stdin
+A, B = stdin.readline().strip().split()
+
+print(max(eval(A), eval(B)))
