@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+from sys import stdin
+# import math
+result = 0
+user_input = int(stdin.readline().strip())
+for i in range(1, user_input + 1):
+    result += i * i
+		
+print(result)
+
+# 1 * 4이동 4 * 4
+# 2 * 3이동 3 * 3
+# 3 * 2이동 2 * 2
+# 4 * 1이동 1 * 1
