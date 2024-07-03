@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+from sys import stdin
+
+N, K = map(int, stdin.readline().strip().split())
+data = stdin.readline().strip().split()
+
+result = N
+
+for i in data:
+	if i.count(str(K)):
+		result -= 1
+		
+print(result)
