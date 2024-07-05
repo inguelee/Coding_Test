@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+def binary_sort(N, K, nums):
+    nums_with_count = []
+    
+    for num in nums:
+        binary_representation = bin(num)[2:]
+        count_ones = binary_representation.count('1')
+        nums_with_count.append((count_ones, num))
+    
+    # Sort by count of 1s (descending), then by the original number (descending)
+    nums_with_count.sort(key=lambda x: (-x[0], -x[1]))
+    
+    # Return the K-th number
+    return nums_with_count[K-1][1]
+
+# Input reading
+N, K = map(int, input().split())
+nums = list(map(int, input().split()))
+
+# Get the result
+result = binary_sort(N, K, nums)
+print(result)
