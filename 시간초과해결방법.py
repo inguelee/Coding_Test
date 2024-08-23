@@ -1,21 +1,21 @@
 # 1. input()보다 sys.stdin.readline()이 더 빠르다.
-import sys
+from sys import stdin
 
 # 한 개의 정수를 입력
-n = int(sys.stdin.readline())
+n = int(stdin.readline())
 
 # 한 개의 문자를 입력
-n = sys.stdin.readline().rstrip()
+n = stdin.readline().rstrip()
 # sys 라이브러리를 사용할 때는 한 줄 입력받고 나서 rstrip() 함수를 꼭 호출해야 한다.
 
 # 띄어쓰기로 구분된 두 개의 정수를 입력
-a, b = [int(x) for x in sys.stdin.readline().split()]
+a, b = [int(x) for x in stdin.readline().split()]
 
 # 띄어쓰기로 두 문자열 입력
-c, d = sys.stdin.readline().split()
+c, d = stdin.readline().split()
 
 # 띄어쓰기로 구분되어 있는 배열을 입력
-arr = [int(x) for x in sys.stdin.readline().split()]
+arr = [int(x) for x in stdin.readline().split()]
 
 # 2. if문에 두 개 이상의 조건이 주어질 때, 조건의 순서를 생각하면서 작성한다.
 if condition1 and condition2:
